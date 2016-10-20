@@ -1,0 +1,14 @@
+<2016-10-18 下午06时34分44秒 CST> <Notice> <Log Management> <BEA-170027> <The Server has established connection with the Domain level Diagnostic Service successfully.> 
+<2016-10-18 下午06时34分44秒 CST> <Notice> <Cluster> <BEA-000197> <Listening for announcements from cluster using unicast cluster messaging> 
+<2016-10-18 下午06时34分44秒 CST> <Notice> <Cluster> <BEA-000133> <Waiting to synchronize with other running members of ATMV_Clusters.> 
+<2016-10-18 下午06时35分14秒 CST> <Notice> <WebLogicServer> <BEA-000365> <Server state changed to ADMIN> 
+<2016-10-18 下午06时35分14秒 CST> <Notice> <WebLogicServer> <BEA-000365> <Server state changed to RESUMING> 
+<2016-10-18 下午06时35分14秒 CST> <Notice> <Cluster> <BEA-000162> <Starting "async" replication service with remote cluster address "null"> 
+<2016-10-18 下午06时35分14秒 CST> <Notice> <Server> <BEA-002613> <Channel "Default" is now listening on 10.136.7.170:7081 for protocols iiop, t3, CLUSTER-BROADCAST, ldap, snmp, http.> 
+<2016-10-18 下午06时35分14秒 CST> <Notice> <WebLogicServer> <BEA-000332> <Started WebLogic Managed Server "ATMV_01" for domain "ATMV" running in Development Mode> 
+<2016-10-18 下午06时35分15秒 CST> <Notice> <WebLogicServer> <BEA-000365> <Server state changed to RUNNING> 
+<2016-10-18 下午06时35分15秒 CST> <Notice> <WebLogicServer> <BEA-000360> <Server started in RUNNING mode> 
+2016-10-18 18:39:01 INFO [UserDetailsServiceImpl.loadUserByUsername():88] - UserDetailsServiceImpl  loadUserByUsername , userId_Before:a1659828d95390c82468a9897f64fbc2f675fdc2ab94c933c02db7ba564ebce1bbd8a60e27a564d1785973b3bbd7292c5e790d2be870ccd565cc3e9a3a845e04f9a4eb675614e852eeccdd9ab823e4c8338a4c8b58ec11d58f4f4507825d009d22449d45580d91947e46d15ccbe9a04fe7a40290632f884c283f87bfb7839501
+2016-10-18 18:39:01 INFO [UserDetailsServiceImpl.loadUserByUsername():94] - UserDetailsServiceImpl  loadUserByUsername , UserId:189200
+2016-10-18 18:39:01 INFO [UserDetailsServiceImpl.loadUserByUsername():105] - UserDetailsServiceImpl  user info :{autotimeout=30, phone=null, orgPath=650100000, maxOperFlag=1, department=null, userTermType=1, defaultModule=null, msgTemplateId=null, type=1, password=0192023a7bbd73250516f069df18b500, langue=null, loginTotal=0, loginAccount=189200, id=8a8a8ae64de5e642014de5ebac660005, createtime=2015-06-17 08:51:53.0, mobilephone= , style=1, lastlogintime=2016-06-16 11:47:05.0, loginfailTotal=0, statusByTransformation=null, orgCode=650100000, recheckUserCode=189200, editTime=2016-06-16 11:45:59.0, userName=null, firstName=admin, lastName=null, orgInfoId=650100000, pwdpolicyId=8a81a2944c691eaf014c6920a2870015, class=class com.grgbanking.base.system.entity.User, orgName=全辖, editUserCode=189200, lastChangepassword=null, poslevel=null, postype=1, multiOnline=null, email=null, contactName=null, changePassword=0}
+2016-10-18 18:39:01 INFO [UserDetailsServiceImpl.loadUser
