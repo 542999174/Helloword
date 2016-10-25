@@ -1,0 +1,85 @@
+#ericsson tables：
+drop table customer;
+CREATE TABLE
+    customer
+    (
+        iam_customer_number varchar2(100),  --主键 
+        customer_number varchar2(500),--一个有规则的客户编号，用于数据集成等信息，具体作用需咨询
+		userid  varchar2(100),-- IAM profile UserId
+		business_unit varchar2(50),--Values: ?	DEFBU: Default Business Unit  ?	TMO: Magenta   ?	METRO: MetroPCS
+		ssn number(10),--完整的序列号，加密存储
+		ivr_pin varchar2(20), --过时的，备用字段 暂无用
+		status varchar2(1),--仅有一种状态，激活状态，其余状态不在当前表中
+		status_date date, --状态产生日期
+		creation_date date,--创建时间
+		customer_group varchar2(50),--所属组 Values: ?	CON: Consumer  ?	BUS: Business  ?	GOV: Government ?	SOI: Special/Other/Internal Use (e.g. Lockbox)
+		parent_customer_group varchar2(50),
+		firstname varchar2(50),
+		lastname  varchar2(50),
+		middlename varchar2(50),
+		employee_number varchar2(50),--TMO employee number.
+		pree_communictation_method varchar2(50),
+		websit_language varchar2(10),
+		date_of_birth date,
+		gender varchar2(10),
+		is_credit_verified varchar2(10),
+		is_id_verified varchar2(10),
+		lastupdatetimestamp timestamp,
+        CONSTRAINT PK_customer PRIMARY KEY (iam_customer_number)
+	--	foreign KEY(customer_number) REFERENCES zhao(id)
+);
+
+	
+CREATE  INDEX CUSTOMER_USERID_IDX ON CUSTOMER (iam_customer_number,userid);
+
+DROP table contract;
+create table
+    contract{
+       iam_contract_id varchar2(100), --主键
+	   contract_code  varchar2(50), --
+	   unique_contract_code varchar2(50),
+	   userid  varchar2(100),
+	   primary_billing_account_id varchar2(100),
+	   IMSI  varchar2(30),
+	   IMSI_STATUS varchar2(20),
+	   IMSI_START_DATE date,
+	   IMSI_EXPIRATION_DATE DATE,
+	   STATUS VARHCAR2(1),
+	   ACTIVATION_DATE TIMESTAMP,
+	   CANCELLATION_DATE TIMESTAMP,
+	   TRANSACTION_TYPE VARCHAR(30),
+	   rate_plan_type varchar2(30),
+	   login_count number,
+	   last_login_timestamp timestamp,
+	   opt_in_silent_timestamp timestamp,
+	   registration_status varchar2(20),
+	   operator_id number,
+	   account_type_subtype varchar2(100),
+	   auth_failure_count number,
+	   last_auth_failure_timestamp timestamp,
+	   prepaid_pin_failure_count number,
+	   last_prepaid_pin_failure_time timestamp,
+	   ssn_failure_count number,
+	   last_ssn_failure_timestamp timestamp,
+	   sms_pin_failure_count number,
+	   last_sms_pin_failure_timestamp timestamp,
+	   opt_out_iba varchar2(1),
+	   is_receiving_offer varchar2(5),
+	   csn    varchar2(100),
+	   experience_type varchar2(50),
+	   iccid varchar2(30),
+	   iccid_pin varchar2(30),
+	   imei varchar2(30),
+	   meid varchar2(100),
+	   oem_authentication_token varchar2(30),
+	   vo_wifi_enabled varchar2(5),
+	   mca_enabled varchar2(5),
+	   mwi_enabled varchar2(5),
+	   is_primary varchar2(5),
+	   tc_accept_date timestamp,
+	   pin_code varchar2(50),
+	   pin_code_exp_timestamp timestamp,
+	   migration_status varchar2(20),
+	   lastupdatetimestamp timestamp,
+       CONSTRAINT PK_contract PRIMARY KEY (iam_contract_id)
+}
