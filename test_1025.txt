@@ -83,3 +83,5 @@ create table
 	   lastupdatetimestamp timestamp,
        CONSTRAINT PK_contract PRIMARY KEY (iam_contract_id)
 }
+
+================================================
